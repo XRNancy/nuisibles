@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body style="margin:0">
-    <embed type="application/pdf" src="./Banderole.pdf" width="100%" height="1000px">
+    <iframe id="theFrame" src="./Banderole.pdf" style="height:1000px; width:100%;"></iframe>
+<script>
+document.getElementById("theFrame").contentWindow.onload = function() {
+    this.document.getElementsByTagName("img")[0].style.width="100%";
+};
+</script>
 </body>
 </html>
